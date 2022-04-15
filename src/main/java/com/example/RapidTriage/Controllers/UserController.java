@@ -73,7 +73,7 @@ public class UserController {
         return userService.modifyUser(id, userInput, token);
     }
 
-    @DeleteMapping(path = "{userId")
+    @DeleteMapping(path = "{userId}")
     public void deleteUser(@PathVariable(name = "userId", required = true) Long id, @RequestHeader(value = "auth", required = true)
                            String token){
         userService.deleteUser(id, token);

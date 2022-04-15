@@ -1,5 +1,6 @@
 package com.example.RapidTriage;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -15,6 +16,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.swing.*;
+
+import com.example.RapidTriage.Repositories.UserRepository;
 
 
 //@EnableAutoConfiguration(exclude={DataSourceAutoConfiguration.class})
@@ -34,11 +37,11 @@ public class RapidTriageApplication {
 		}
 	}
 
-	@Bean(name="entityManagerFactory")
+	/*@Bean(name="entityManagerFactory")
 	public LocalSessionFactoryBean sessionFactory() {
 		LocalSessionFactoryBean sessionFactory = new LocalSessionFactoryBean();
 		return sessionFactory;
-	}
+	}*/
 
 	/*@GetMapping("/hello")
 	public String sayHello(@RequestParam(value = "myName", defaultValue = "World") String name){

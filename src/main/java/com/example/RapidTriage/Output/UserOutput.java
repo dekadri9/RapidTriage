@@ -3,6 +3,7 @@ package com.example.RapidTriage.Output;
 import com.example.RapidTriage.Models.User;
 
 import java.time.LocalDate;
+import java.time.Period;
 
 public class UserOutput extends OutputManager {
     private String selfUri;
@@ -65,12 +66,12 @@ public class UserOutput extends OutputManager {
     }
 
     public Integer getAge() {
-        return age;
+        return Period.between(birthDate, LocalDate.now()).getYears();
     }
 
-    public void setAge(Integer age) {
+    /*public void setAge(Integer age) {
         this.age = age;
-    }
+    }*/
 
     public LocalDate getBirthDate() {
         return birthDate;
