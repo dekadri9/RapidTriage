@@ -16,7 +16,7 @@ public class DemoConfig {
 
     CommandLineRunner commandLineRunner(UserRepository userRepository){
         return args -> {
-            UserInput userDetails = new UserInput("demoEmail", "demoName", "demoUsername", "demoPassword", LocalDate.of(1998, 12, 2));
+            UserInput userDetails = new UserInput("demoEmail@gmail.com", "demoName", "demoUsername", "demoPassword", LocalDate.of(1998, 12, 2));
             user = new User(userDetails.getEmail(), userDetails.getName(), userDetails.getUsername(), userDetails.getPassword(), userDetails.getBirthDate());
             user.setToken("AUTH");
         };
