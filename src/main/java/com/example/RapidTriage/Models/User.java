@@ -5,7 +5,6 @@ import java.time.LocalDate;
 
 @Entity
 @Table(name = "users")
-
 public class User {
 
     //posibilidad de element collection con patologias previas

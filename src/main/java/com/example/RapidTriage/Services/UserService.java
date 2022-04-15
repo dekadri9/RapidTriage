@@ -9,6 +9,7 @@ import com.example.RapidTriage.Output.UserOutput;
 import com.example.RapidTriage.Repositories.UserRepository;
 import net.bytebuddy.utility.RandomString;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.http.converter.HttpMessageConversionException;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
@@ -23,8 +24,10 @@ import java.util.Map;
 
 @Service
 public class UserService {
+
     private final UserRepository userRepository;
     private JavaMailSender javaMailSender;
+
 
     @Autowired
     public UserService(UserRepository userRepository, JavaMailSender javaMailSender){
